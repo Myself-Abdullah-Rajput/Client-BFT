@@ -13,8 +13,8 @@ export const Footer = () => {
                 </div>
                 <div className="">
                     <nav>
-                        <Link href={"mailto:vipflighttoday@gmail.com"} className='underline cursor-pointer font-light'>
-                            Vipflighttoday@gmail.com
+                        <Link href={"mailto:gloria@bestflytoday.com"} className='underline cursor-pointer font-light'>
+                            Gloria@bestflytoday.com
                         </Link>
                     </nav>
                 </div>

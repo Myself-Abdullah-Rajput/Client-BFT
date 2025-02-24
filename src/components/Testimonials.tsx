@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+
+import { motion } from 'framer-motion'
 
 const testimonials = [
   {
@@ -27,17 +31,32 @@ const testimonials = [
   },
 ];
 
-export const Testimonials = () => {
+const Testimonials = () => {
   return <section className="py-20" id="test">
     <div className="container">
         <h2 className="text-5xl md:text-6xl font-medium tracking-tighter text-center">Beyond Expectations.</h2>
         <p className="text-white/70 text-center text-lg md:text-xl mt-5 tracking-tight max-w-sm mx-auto">Check out honset reviews of our existing customers before getting ahead.</p>
     
-        <div className="flex overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-            <div className="flex gap-5 flex-none">
-                {testimonials.map((testimonial) => (
+        <div 
+          className="flex overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]"
+        >
+            <motion.div
+              className="flex gap-5 flex-none"
+              initial={{
+                translateX: '-50%',
+              }}
+              animate={{
+                translateX: '0',
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 25,
+                ease: "linear",
+              }}
+            >
+                {[...testimonials, ...testimonials].map((testimonial, index) => (
                     <div 
-                        key={testimonial.name}
+                        key={index}
                         className="border border-white/15 p-6 md:p-8 rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,255,.3),black)] max-w-xs md:max-w-md flex-none"
                     >
                         <div className="tracking-tight text-lg md:text-2xl">{testimonial.text}</div>
@@ -58,8 +77,10 @@ export const Testimonials = () => {
                         </div>
                     </div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     </div>
   </section>;
 };
+
+export default Testimonials;

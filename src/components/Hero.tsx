@@ -4,6 +4,7 @@ import React, { useRef } from 'react'
 import GLWButton from './GLWButton'
 import { useRouter } from 'next/navigation';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Plane } from 'lucide-react';
 
 export const Hero = () => {
   const sectionRef = useRef(null);
@@ -49,7 +50,7 @@ export const Hero = () => {
         }}
       >
         <div className="absolute top-1/2 h-2 w-2 left-0 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-0 h-2 w-2 left-1/2 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <Plane className="absolute top-0 h-8 w-8 rotate-45 left-1/2 text-white -translate-x-1/2 fill-white -translate-y-1/2" />
         <div className="absolute top-1/2 h-5 w-5 border border-white left-full rounded-full -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center">
             <div className="h-2 w-2 bg-white rounded-full"></div>
         </div>
@@ -87,7 +88,7 @@ export const Hero = () => {
         }}
       >
         <div className="absolute top-1/2 h-2 w-2 left-0 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute top-1/2 h-2 w-2 left-full bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <Plane className="absolute top-0 h-8 w-8 rotate-45 left-1/2 text-white -translate-x-1/2 fill-white -translate-y-1/2" />
       </motion.div>
       <div className="container relative mt-16">
         <h1 className='tracking-tighter text-8xl md:text-[168px] md:leading-none font-semibold bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.6))] text-center text-transparent bg-clip-text'>FLIGHTS</h1>

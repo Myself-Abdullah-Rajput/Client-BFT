@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${EntFont.className} antialiased dark`}
+        className={`${EntFont.className} antialiased dark hidscrl`}
       >
         {children}
       </body>
