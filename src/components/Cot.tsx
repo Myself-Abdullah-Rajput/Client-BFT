@@ -1,11 +1,8 @@
-"use client";
-
 import React from 'react'
 import GLWButton from './GLWButton'
-import { useRouter } from 'next/navigation';
+import Link from "next/link";
 
 export const Cot = () => {
-	const router = useRouter();
   return (
     <section className='py-20 px-3 md:px-5' id='cot'>
         <div className="container">
@@ -20,10 +17,10 @@ export const Cot = () => {
                     <h2 className='text-5xl md:text-6xl tracking-tighter max-w-[480px] mx-auto text-center font-medium'>Affordable Flights For Everyone</h2>
                     <p className='text-center text-lg md:text-xl max-w-sm mx-auto text-white/70 px-4 mt-5 tracking-tight'>Achive clear, impactful, enjoyable trips without complexity.</p>
                     <div className="flex justify-center mt-7">
-                        <GLWButton
-							onClick={() => router.push(`mailto:gloria@bestflytoday.com`)}
-						>
-                            gloria@bestflytoday.com
+                        <GLWButton>
+							<Link href="mailto:gloria@bestflytoday.com">
+								gloria@bestflytoday.com
+							</Link>
                         </GLWButton>
                     </div>
                 </div>
