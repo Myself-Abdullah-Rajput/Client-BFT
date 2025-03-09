@@ -1,5 +1,5 @@
 
-<simport { Cot } from "@/components/Cot";
+import { Cot } from "@/components/Cot";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
