@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Head from "next/head"
+import Script from "next/script"
 
 const EntFont = Inter({
   variable: "--font-inter",
@@ -20,17 +20,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-	<Head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16861373148"></script>
-        <script>
+	<head>
+		<Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16861373148"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-16861373148');
           `}
-        </script>
-      </Head>
+        </Script>
+	</head>
       <body
         className={`${EntFont.className} antialiased dark hidscrl`}
       >
