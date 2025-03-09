@@ -1,4 +1,3 @@
-
 import { Cot } from "@/components/Cot";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -13,6 +12,7 @@ export default function Home() {
       <Testimonials />
       <Cot />
       <Footer />
+	  
 	  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16861373148"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -20,7 +20,7 @@ export default function Home() {
 		  gtag('js', new Date());
 
 		  gtag('config', 'AW-16861373148');
-		</script>
+	  </script>
     </>
   );
 }
