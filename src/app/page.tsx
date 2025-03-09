@@ -15,7 +15,7 @@ export default function Home() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-16861373148');
+            gtag('config', process.NEXT_PUBLIC_GTM_ID);
           `}
         </script>
       </Head>
