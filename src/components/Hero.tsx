@@ -2,13 +2,12 @@
 
 import React, { useRef } from 'react'
 import GLWButton from './GLWButton'
-import { useRouter } from 'next/navigation';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Plane } from 'lucide-react';
+import Link from 'next/link';
 
 export const Hero = () => {
   const sectionRef = useRef(null);
-  const router = useRouter();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -93,10 +92,12 @@ export const Hero = () => {
       <div className="container relative mt-16">
         <h1 className='tracking-tighter text-8xl md:text-[168px] md:leading-none font-semibold bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.6))] text-center text-transparent bg-clip-text'>FLIGHTS</h1>
         <p className='text-center mt-4 text-lg md:text-xl max-w-xl mx-auto text-white/70'>Get most offorable & cheap flight tickets compared to the market just by giving a phone call.</p>
-        <div className="flex justify-center mt-4" onClick={() => router.push(`/#cot`)}>
-            <GLWButton>
-                Contact Us
-            </GLWButton>
+        <div className="flex justify-center mt-4">
+            <Link href={`tel:+16465351358`}>
+              <GLWButton>
+                +1 646 53 51358
+              </GLWButton>
+            </Link>
         </div>
       </div>
     </motion.section>

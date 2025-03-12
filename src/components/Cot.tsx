@@ -17,9 +17,9 @@ export const Cot = () => {
                     <h2 className='text-5xl md:text-6xl tracking-tighter max-w-[480px] mx-auto text-center font-medium'>Affordable Flights For Everyone</h2>
                     <p className='text-center text-lg md:text-xl max-w-sm mx-auto text-white/70 px-4 mt-5 tracking-tight'>Achive clear, impactful, enjoyable trips without complexity.</p>
                     <div className="flex justify-center mt-7">
-							<Link href={"mailto:newyorkclub2021@gmail.com"}>
+							<Link href={"tel:+16465351358"}>
 								<GLWButton>
-									newyorkclub2021@gmail.com
+                                    +1 646 53 51358
 								</GLWButton>
 							</Link>
                     </div>
