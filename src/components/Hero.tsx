@@ -95,7 +95,7 @@ export const Hero = () => {
         <div className="flex justify-center mt-4">
             <Link href={`tel:+16465351358`}>
               <GLWButton>
-                +1 646 53 51358
+                646-535-1358
               </GLWButton>
             </Link>
         </div>
