@@ -4,7 +4,8 @@ import React, { useRef } from 'react'
 import GLWButton from './GLWButton'
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Plane } from 'lucide-react';
-import Link from 'next/link';
+import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from './ui/dialog';
+import { ContactForm } from './ContactForm';
 
 export const Hero = () => {
   const sectionRef = useRef(null);
@@ -93,11 +94,23 @@ export const Hero = () => {
         <h1 className='tracking-tighter text-8xl md:text-[168px] md:leading-none font-semibold bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.6))] text-center text-transparent bg-clip-text'>FLIGHTS</h1>
         <p className='text-center mt-4 text-lg md:text-xl max-w-xl mx-auto text-white/70'>Get most offorable & cheap flight tickets compared to the market just by giving a phone call.</p>
         <div className="flex justify-center mt-4">
-            <Link href={`tel:+16465351358`}>
+          <Dialog>
+            <DialogTrigger asChild>
               <GLWButton>
-                646-535-1358
+                Get a quote
               </GLWButton>
-            </Link>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogTitle>
+                Get an estimate for your destination
+              </DialogTitle>
+              <DialogDescription>
+                We will send you the best possible flight options for your destination.
+              </DialogDescription>
+
+              <ContactForm />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </motion.section>

@@ -6,9 +6,11 @@ interface GLWButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const GLWButton = ({
     children,
+    ...props
 }: GLWButtonProps) => {
   return (
         <button
+            {...props}
             className='relative px-3 py-2 font-medium text-sm rounded-lg bg-gradient-to-b from-[#190d2e] to-[#4a208a] shadow-[0px_0px_8px_#8c45ff]'
         >
             <div className="absolute inset-0">
