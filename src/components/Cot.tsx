@@ -17,9 +17,9 @@ export const Cot = () => {
                     <h2 className='text-5xl md:text-6xl tracking-tighter max-w-[480px] mx-auto text-center font-medium'>Affordable Flights For Everyone</h2>
                     <p className='text-center text-lg md:text-xl max-w-sm mx-auto text-white/70 px-4 mt-5 tracking-tight'>Achive clear, impactful, enjoyable trips without complexity.</p>
                     <div className="flex justify-center mt-7">
-							<Link href={"tel:+16465351358"}>
+							<Link href={"tel:+16072085518"}>
 								<GLWButton>
-                                    646-535-1358
+                                    607-208-5518
 								</GLWButton>
 							</Link>
                     </div>
