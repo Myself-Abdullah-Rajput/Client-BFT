@@ -21,23 +21,47 @@ export default function RootLayout({
   return (
     <html lang="en">
 	<head>
+  {/* Load Google Ads gtag base */}
   <Script
-    src="https://www.googletagmanager.com/gtag/js?id=AW-16861373148"
-    strategy="afterInteractive"
-  />
-  <Script
-    id="gtag-init"
-    strategy="afterInteractive"
-    dangerouslySetInnerHTML={{
-      __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-16861373148');
-      `,
-    }}
-  />
-
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16861373148"
+          strategy="afterInteractive"
+        />
+        {/* Init gtag */}
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16861373148');
+            `,
+          }}
+        />
+        {/* Conversion function */}
+        <Script
+          id="gtag-conversion"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-16861373148/fViTCLKp1q4aENzFkOg-',
+                    'value': 1.0,
+                    'currency': 'PKR',
+                    'event_callback': callback
+                });
+                return false;
+              }
+            `,
+          }}
+        />
 	</head>
       <body
         className={`${EntFont.className} antialiased dark hidscrl`}
