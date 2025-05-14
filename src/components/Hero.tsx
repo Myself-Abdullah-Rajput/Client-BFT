@@ -105,7 +105,7 @@ export const Hero = () => {
                 Get an estimate for your destination
               </DialogTitle>
               <DialogDescription>
-                We will send you the best possible flight options for your destination.
+                We will send you the best possible flight options for your destination and full refund on cancellation.
               </DialogDescription>
 
               <ContactForm />
